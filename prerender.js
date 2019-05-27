@@ -28,7 +28,12 @@ async function renderRoute(document, route) {
 const routes = [
   '/home',
   '/books',
-  '/books/9783864906466'
+  '/books/9783864906466',
+  '/books/9783864902079',
+  '/books/9783864904523',
+  '/books/9783960090267',
+  '/books/9783864903274',
+  '/books/9783864903571'
 ];
 
 const indexHtml = fs.readFileSync(path.join(DIST_FOLDER, 'index.html')).toString();
