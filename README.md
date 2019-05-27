@@ -6,11 +6,11 @@ Dieser BookMonkey enthält Server-Side Rendering und Statisches Pre-Rendering.
 
 Die Grundlage dieses Projekts ist der BookMonkey mit dem [Stand nach Iteration 7 "Internationalisierung (i18n)"](https://github.com/book-monkey3/iteration-7-i18n) – ohne SSR.
 
-### Demo
+## Demo
 
 Eine Livedemo mit Pre-Rendering finden Sie unter http://bm3-ssr.angular-buch.com.
 
-### Dynamisches Server-Side Rendering
+## Dynamisches Server-Side Rendering
 
 Um Server-Side Rendering im Projekt aufzusetzen, wurde der folgende Befehl genutzt.
 Dieser Schritt ist bereits erledigt und muss nicht erneut durchgeführt werden:
@@ -38,7 +38,7 @@ Anschließend ist die Anwendung unter http://localhost:4000 erreichbar.
 Werfen Sie doert einen Blick in den ausgelieferten HTML-Code: Sie werden die vorgerenderte Angular-Anwendung erkennen.
 
 
-### Statisches Pre-Rendering
+## Statisches Pre-Rendering
 
 Für das Pre-Rendering wurde die Datei `prerender.js` angelegt.
 Darin befindet sich eine Liste der Routen, für die bereits beim Build eine HTML-Seite erzeugt und im Dateisystem abgelegt werden soll.
