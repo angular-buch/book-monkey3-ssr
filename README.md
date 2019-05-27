@@ -8,7 +8,7 @@ Die Grundlage dieses Projekts ist der BookMonkey mit dem [Stand nach Iteration 7
 
 ## Demo
 
-Eine Livedemo mit Pre-Rendering finden Sie unter http://bm3-ssr.angular-buch.com.
+Eine Livedemo mit Pre-Rendering finden Sie unter https://bm3-ssr.angular-buch.com.
 
 ## Dynamisches Server-Side Rendering
 
