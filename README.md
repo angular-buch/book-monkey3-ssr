@@ -6,6 +6,10 @@ Dieser BookMonkey enthält Server-Side Rendering und Statisches Pre-Rendering.
 
 Die Grundlage dieses Projekts ist der BookMonkey mit dem [Stand nach Iteration 7 "Internationalisierung (i18n)"](https://github.com/book-monkey3/iteration-7-i18n) – ohne SSR.
 
+### Demo
+
+Eine Livedemo mit Pre-Rendering finden Sie unter http://bm3-ssr.angular-buch.com.
+
 ### Dynamisches Server-Side Rendering
 
 Um Server-Side Rendering im Projekt aufzusetzen, wurde der folgende Befehl genutzt.
