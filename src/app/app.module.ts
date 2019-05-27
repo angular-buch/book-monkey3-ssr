@@ -18,7 +18,7 @@ import { TokenInterceptor } from './shared/token-interceptor';
     SearchComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,
     AppRoutingModule
   ],
