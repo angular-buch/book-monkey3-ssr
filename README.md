@@ -1,27 +1,50 @@
-# BookMonkey
+# 🙊💻 BookMonkey mit Server-Side Rendering
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.2.
+Dieser BookMonkey enthält Server-Side Rendering und Statisches Pre-Rendering.
 
-## Development server
+> 📕⚠️ **Bitte lesen Sie dazu das Kapitel 19 "Server-Side Rendering mit Angular Universal" im Angular-Buch (2. Auflage) ab Seite 537.**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Die Grundlage dieses Projekts ist der BookMonkey mit dem [Stand nach Iteration 7 "Internationalisierung (i18n)"](https://github.com/book-monkey3/iteration-7-i18n) – ohne SSR.
 
-## Code scaffolding
+### Dynamisches Server-Side Rendering
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Um Server-Side Rendering im Projekt aufzusetzen, wurde der folgende Befehl genutzt.
+Dieser Schritt ist bereits erledigt und muss nicht erneut durchgeführt werden:
 
-## Build
+```bash
+ng add @nguniversal/express-engine --clientProject BookMonkey
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Um dieses Projekt auszuführen, müssen Sie das Repo klonen und mithilfe `npm install` alle Abhängigkeiten installieren.
+Anschließend können Sie das Projekt bauen:
 
-## Running unit tests
+```bash
+npm run build:client-and-server-bundles
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Der Serverprozess zur Auslieferung der gerenderten HTML-Seiten ist bereits aufgesetzt.
+Nach dem Build kann der Server wie folgt gebaut und gestartet werden:
 
-## Running end-to-end tests
+```bash
+npm run compile:server
+npm run serve:ssr
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Anschließend ist die Anwendung unter http://localhost:4000 erreichbar.
+Werfen Sie doert einen Blick in den ausgelieferten HTML-Code: Sie werden die vorgerenderte Angular-Anwendung erkennen.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Statisches Pre-Rendering
+
+Für das Pre-Rendering wurde die Datei `prerender.js` angelegt.
+Darin befindet sich eine Liste der Routen, für die bereits beim Build eine HTML-Seite erzeugt und im Dateisystem abgelegt werden soll.
+
+Passen Sie diese Liste ggf. an und führen Sie dann das Skript mithilfe von Node.js aus:
+
+```bash
+node prerender
+```
+
+Den Ordner `dist/browser` können Sie danach mit einem einfachen Webserver ausliefern.
+
+
